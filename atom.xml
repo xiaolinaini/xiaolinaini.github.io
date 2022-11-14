@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https:// xiaolinaini.github.io/</id>
+    <title>小林的算法屋</title>
+    <updated>2022-11-14T14:46:20.101Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https:// xiaolinaini.github.io/"/>
+    <link rel="self" href="https:// xiaolinaini.github.io/atom.xml"/>
+    <subtitle>算法的本质就是穷举
+那么让我们来聪明的穷举</subtitle>
+    <logo>https:// xiaolinaini.github.io/images/avatar.png</logo>
+    <icon>https:// xiaolinaini.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, 小林的算法屋</rights>
+    <entry>
+        <title type="html"><![CDATA[1.F]]></title>
+        <id>https:// xiaolinaini.github.io/post/1f/</id>
+        <link href="https:// xiaolinaini.github.io/post/1f/">
+        </link>
+        <updated>2022-11-14T14:32:37.000Z</updated>
+        <content type="html"><![CDATA[<p>https://codeforces.com/gym/409637/problem/F<br>
+分析一下题目Yolo，Alice，Bob 三个人<br>
+对于每题的选项来说一共有三种情况<br>
+1 Y A B他们三人答案相同 这个题最终的结果要么他们都对要么都错<br>
+2 Y与其中一人答案相同    结果 二个人对 或者都错<br>
+3 都不同<br>
+我们的目的是让Y及格而A B都不及格 等价于让Y多对的同时A B 多错<br>
+贪心<br>
+因此我们首先要做的是先找到第3种情况的题<br>
+然后找第二种情况的题 因为这种情况可以让Y对的题尽量增加<br>
+最后第一种<br>
+https://www.luogu.com.cn/paste/gjwoo4y5</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1.E]]></title>
+        <id>https:// xiaolinaini.github.io/post/1e/</id>
+        <link href="https:// xiaolinaini.github.io/post/1e/">
+        </link>
+        <updated>2022-11-14T14:30:30.000Z</updated>
+        <content type="html"><![CDATA[<p>https://codeforces.com/gym/409637/problem/E<br>
+维护一个前缀最大值和一个后缀最大值<br>
+这种思想就是维护一个数组来记录每个历史时间的最大值方便下次更新<br>
+https://www.luogu.com.cn/paste/6an6evqg</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1.D]]></title>
+        <id>https:// xiaolinaini.github.io/post/1d/</id>
+        <link href="https:// xiaolinaini.github.io/post/1d/">
+        </link>
+        <updated>2022-11-14T14:24:59.000Z</updated>
+        <content type="html"><![CDATA[<p>https://codeforces.com/gym/409637/problem/D<br>
+数据是2e5所以n方是过不了的<br>
+考虑n的做法<br>
+从题面上很容易看出x，与y二者无关<br>
+|xi-xj|等价与max(xi,xj)-min(xi,xj);<br>
+同时维护一个x的前缀和pri<br>
+因此可以把x排序然后每个x对答案的贡献就是（i-1）xi-pri[i-1]+pri[n]-pri[i]-(n-i)*xi<br>
+对y同理<br>
+https://www.luogu.com.cn/paste/2oia76od</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1.C]]></title>
+        <id>https:// xiaolinaini.github.io/post/1c/</id>
+        <link href="https:// xiaolinaini.github.io/post/1c/">
+        </link>
+        <updated>2022-11-14T14:17:57.000Z</updated>
+        <content type="html"><![CDATA[<p>https://codeforces.com/gym/409637/problem/C<br>
+要跳过这一级的条件就是ai &lt;n-i;即跳过后可以产生正收益<br>
+而且跳级次数产生的减少是固定的<br>
+因此我们不妨让ai=n-i-ai<br>
+然后把a序列排序<br>
+最大值一定是从末尾开始<br>
+然后枚举跳级次数即可，拿到中间的最大值与最小值<br>
+https://www.luogu.com.cn/paste/msac1iuj</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1.B]]></title>
+        <id>https:// xiaolinaini.github.io/post/1b/</id>
+        <link href="https:// xiaolinaini.github.io/post/1b/">
+        </link>
+        <updated>2022-11-14T14:12:42.000Z</updated>
+        <content type="html"><![CDATA[<p>https://codeforces.com/gym/409637/problem/B<br>
+设sum=a1+...+an;<br>
+如果sum%n=k；那么说明有n个<br>
+如果不行设a为多个数和<br>
+令（sum-a）%n=k;<br>
+则由模运算的结合律<br>
+a=(sum-k)%n;<br>
+所有a一定在[1，n-1]之间<br>
+所以n-1；即可<br>
+https://www.luogu.com.cn/paste/b1xlaubz</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第一周测试赛A]]></title>
+        <id>https:// xiaolinaini.github.io/post/di-yi-zhou-ce-shi-sai-a/</id>
+        <link href="https:// xiaolinaini.github.io/post/di-yi-zhou-ce-shi-sai-a/">
+        </link>
+        <updated>2022-11-14T13:48:22.000Z</updated>
+        <content type="html"><![CDATA[<p>https://codeforces.com/gym/409637/problem/A<br>
+从题面上很容易算出超出100就永远不可能在10秒内达到<br>
+距离小于50时一定都是冲刺<br>
+那么50到100之间呢？<br>
+可以利用数学来推但是考虑到冲刺最多就10次不如直接枚举<br>
+思路好了直接上代码<br>
+https://www.luogu.com.cn/paste/mjgg4kqd</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https:// xiaolinaini.github.io/post/hello-gridea/</id>
+        <link href="https:// xiaolinaini.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>

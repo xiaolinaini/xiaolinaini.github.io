@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>1.F | 小林的算法屋</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https:// xiaolinaini.github.io//favicon.ico?v=1668437177131">
+<link rel="stylesheet" href="https:// xiaolinaini.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="https://codeforces.com/gym/409637/problem/F
+分析一下题目Yolo，Alice，Bob 三个人
+对于每题的选项来说一共有三种情况
+1 Y A B他们三人答案相同 这个题最终的结果要么他们都对要么都错..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https:// xiaolinaini.github.io/">
+        <img src="https:// xiaolinaini.github.io//images/avatar.png?v=1668437177131" class="site-logo">
+        <h1 class="site-title">小林的算法屋</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      算法的本质就是穷举
+那么让我们来聪明的穷举
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https:// xiaolinaini.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">1.F</h2>
+            <div class="post-date">2022-11-14</div>
+            
+            <div class="post-content" v-pre>
+              <p>https://codeforces.com/gym/409637/problem/F<br>
+分析一下题目Yolo，Alice，Bob 三个人<br>
+对于每题的选项来说一共有三种情况<br>
+1 Y A B他们三人答案相同 这个题最终的结果要么他们都对要么都错<br>
+2 Y与其中一人答案相同    结果 二个人对 或者都错<br>
+3 都不同<br>
+我们的目的是让Y及格而A B都不及格 等价于让Y多对的同时A B 多错<br>
+贪心<br>
+因此我们首先要做的是先找到第3种情况的题<br>
+然后找第二种情况的题 因为这种情况可以让Y对的题尽量增加<br>
+最后第一种<br>
+https://www.luogu.com.cn/paste/gjwoo4y5</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https:// xiaolinaini.github.io/post/1e/">
+                  <h3 class="post-title">
+                    1.E
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'ffc399803d0036ff83d9',
+        clientSecret: '51f62d6fbb16c663c084ca1916362ead69b93ff1',
+        repo: 'xiaolinaini.github.io',
+        owner: 'xiaolinaini',
+        admin: ['xiaolinaini'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
